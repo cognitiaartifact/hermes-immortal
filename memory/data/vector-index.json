@@ -164,7 +164,58 @@
         "system",
         "cron"
       ]
+    },
+    {
+      "id": "d1c212ae",
+      "text": "**Source:** Cron job (session-state-sync every 5min)\n**Model:** deepseek-chat (deepseek provider)",
+      "timestamp": "2026-05-07T01:30:23.081302+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "d1ffbaee",
+      "text": "## Active Context\n\nCron-triggered session-state persistence checkpoint. No user-facing work in progress. This is a recurring save-every-5-minutes job (job_id: 639248d13043).\n\n## Pending / Interrupted Tasks\n\n- None. This session was initiated solely to persist session state.\n- Prior runs this hour have completed with `[SILENT]` (no new state to report).\n\n## Crash Recovery Notes\n\n- `~/hermes-knowledge/` directory confirmed present.\n- Memory disabled in cron environment \u2014 do not rely on persistent ",
+      "timestamp": "2026-05-07T01:30:23.081805+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "active"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "active"
+      ]
+    },
+    {
+      "id": "e92633b0",
+      "text": "- Active jobs: ONCFT Session Autosave (2min), session-state-sync (5min), mesh-inbox-check (15min), mesh-inbox-poller (2min), skillucate-daily-seo (7am), skillucate-ai-discoverability (8am), morning-seo (7am), evening-learn-report (9pm), skillucate-lead-monitor (240min), hermes-github-backup (6hr), holographic-memory-seed (30min).\n- Recovering agent should: `cronjob list` for schedules, `session_search` for recent completions.\n\n## State\n\n- Working directory: default session cwd\n- No background pr",
+      "timestamp": "2026-05-07T01:30:23.081976+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "active"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "active"
+      ]
     }
   ],
-  "count": 9
+  "count": 12
 }
