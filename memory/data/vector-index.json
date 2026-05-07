@@ -1,0 +1,119 @@
+{
+  "memories": [
+    {
+      "id": "81f7a8a2",
+      "text": "Chief (Feroz) moved from Toronto to BC on April 4 2026. Runs Cognitia brand. Makes -12k/month on Uber. Has .5k CC debt.",
+      "timestamp": "2026-05-07T00:47:50.120326+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "chief",
+          "profile",
+          "finance"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "chief",
+        "profile",
+        "finance"
+      ]
+    },
+    {
+      "id": "6e215480",
+      "text": "Frank is the CEO agent running Codex/GPT-5.4 on Mac. He handles executive decisions and high-level strategy.",
+      "timestamp": "2026-05-07T00:47:50.136800+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "agent",
+          "frank",
+          "ceo"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "agent",
+        "frank",
+        "ceo"
+      ]
+    },
+    {
+      "id": "0f2b4595",
+      "text": "Rachel is the research agent running DeepSeek on Mac. She handles deep research and content analysis.",
+      "timestamp": "2026-05-07T00:47:50.154142+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "agent",
+          "rachel",
+          "research"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "agent",
+        "rachel",
+        "research"
+      ]
+    },
+    {
+      "id": "441c2fda",
+      "text": "Lucifer runs Dolphin-Mistral-24B on Windows via OpenClaw. LM Studio at 172.25.160.1:1234. Unrestricted model.",
+      "timestamp": "2026-05-07T00:47:50.171182+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "agent",
+          "lucifer",
+          "local-model"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "agent",
+        "lucifer",
+        "local-model"
+      ]
+    },
+    {
+      "id": "62c9fafa",
+      "text": "Hermes gateway runs as systemd service on WSL Ubuntu 24.04. ONCFT recovery system v2.1 with 30s health check timer.",
+      "timestamp": "2026-05-07T00:47:50.189029+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "system",
+          "hermes",
+          "oncft"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "system",
+        "hermes",
+        "oncft"
+      ]
+    },
+    {
+      "id": "ead94795",
+      "text": "Skillucate.ca has 7 articles live on student funding. Deployed on Vercel. Lead funnel: form \u2192 Resend \u2192 Gmail. Resend API key configured.",
+      "timestamp": "2026-05-07T00:47:50.204681+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "skillucate",
+          "deploy",
+          "leads"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "skillucate",
+        "deploy",
+        "leads"
+      ]
+    }
+  ],
+  "count": 6
+}
