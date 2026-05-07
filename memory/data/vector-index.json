@@ -113,7 +113,58 @@
         "deploy",
         "leads"
       ]
+    },
+    {
+      "id": "8292f664",
+      "text": "**Source:** Cron job \u2014 session persistence heartbeat\n\n## Context\nScheduled cron job firing at the May 6 18:00 mark. This is a periodic session-persistence and heartbeat job. Instructions: save current session state to `~/hermes-knowledge/logs/current-session.md` for crash recovery.",
+      "timestamp": "2026-05-07T01:00:25.204464+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "abd1045f",
+      "text": "- **No active project work in this session.** This is a standalone cron invocation with no prior conversation context.\n- The file at `~/hermes-knowledge/logs/current-session.md` serves as the crash-recovery checkpoint.\n- Auto-delivery enabled \u2014 this report will be delivered to the user as output.\n\n## Environment\n- **User:** `smrai`\n- **Hermes knowledge base:** `/home/smrai/hermes-knowledge/`",
+      "timestamp": "2026-05-07T01:00:25.204847+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "active"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "active"
+      ]
+    },
+    {
+      "id": "6f0843c5",
+      "text": "- **Cron session IDs (concurrent):** 328725925dca, ed4414ee3ff1, 06854dbc765d\n- **Logs directory:** `~/hermes-knowledge/logs/`\n\n## Recovery Instructions\nIf recovering from a crash:\n1. Read this file for last known state.\n2. Check `~/hermes-knowledge/logs/latest-check.md` for most recent health check.\n3. Review `~/hermes-knowledge/logs/nightly-report-*.md` for periodic reports.\n\n## Last Write",
+      "timestamp": "2026-05-07T01:00:25.204988+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
     }
   ],
-  "count": 6
+  "count": 9
 }

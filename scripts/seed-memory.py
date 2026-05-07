@@ -6,7 +6,7 @@ Run periodically to keep memory fresh.
 
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent / "memory"))
 from holo import HolographicMemory
 
 SESSION_LOG = Path.home() / "hermes-knowledge" / "logs" / "current-session.md"
