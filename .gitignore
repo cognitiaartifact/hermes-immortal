@@ -1,0 +1,26 @@
+# Secrets
+.env
+.env.local
+*.key
+*-key.*
+*secret*
+*token*
+credential*
+
+# Large binaries
+claude-code-source/
+antigravity.tar.gz
+*.deb
+*.tar.gz
+node_modules/
+__pycache__/
+*.pyc
+
+# Runtime
+*.log
+.next/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
