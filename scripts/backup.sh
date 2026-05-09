@@ -22,7 +22,7 @@ if ! git diff --cached --quiet; then
   git commit -m "Auto-backup: $DATE"
   
   # Push to GitHub (will fail if key not added yet — that's ok)
-  if git push origin master 2>&1 | tee -a "$LOG" | tail -3; then
+  if git push origin main 2>&1 | tee -a "$LOG" | tail -3; then
     echo "[$DATE] ✅ Backup pushed successfully" >> "$LOG"
   else
     echo "[$DATE] ⚠️ Push failed — SSH key may not be added to GitHub" >> "$LOG"
