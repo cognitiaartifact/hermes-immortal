@@ -589,7 +589,322 @@
         "system",
         "active"
       ]
+    },
+    {
+      "id": "c3c77f0f",
+      "text": "**Session**: cron_328725925dca_20260507_002019\n**Started**: 2026-05-07 00:20 UTC",
+      "timestamp": "2026-05-07T07:30:37.388172+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "1e9adefe",
+      "text": "**Session**: cron_f89685122204_20260507_004520\n**Started**: 2026-05-07 00:45 UTC",
+      "timestamp": "2026-05-07T08:00:13.893215+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "66fce765",
+      "text": "**Status:** Cron job \u2014 no active user task. This is a scheduled execution.\n**Provider:** deepseek (deepseek-chat)",
+      "timestamp": "2026-05-07T08:30:20.490386+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "active"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "active"
+      ]
+    },
+    {
+      "id": "288deaa7",
+      "text": "**Environment:** WSL (Ubuntu), Hermes Agent via cron",
+      "timestamp": "2026-05-07T08:30:20.490784+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "df6f59ff",
+      "text": "**No pending work.** Session is clean \u2014 no interrupted tasks, no partial operations, no state to preserve. The cron job was triggered and will execute whatever its prompt instructs.",
+      "timestamp": "2026-05-07T08:30:20.491675+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "abcf9bb3",
+      "text": "**Session ID:** cron-639248d13043",
+      "timestamp": "2026-05-07T09:00:19.333838+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "b3e38a64",
+      "text": "**Source:** Cron job (session state persistence)\n**Provider/Model:** deepseek/deepseek-chat",
+      "timestamp": "2026-05-07T09:00:19.334232+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "cron"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "cron"
+      ]
+    },
+    {
+      "id": "b50be07f",
+      "text": "## Active Work\n- Cron-triggered session state persistence to `~/hermes-knowledge/logs/current-session.md` (this file)\n\n## Pending Tasks",
+      "timestamp": "2026-05-07T09:00:19.335472+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "active"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "active"
+      ]
+    },
+    {
+      "id": "c5a4792c",
+      "text": "- **CRITICAL: Hermes Gateway crash loop fix** \u2014 Gateway (referred to as \"Canvo\" by user) is in a death spiral. Root cause: `finish_reason='length'` \u2014 model hits default max output tokens, truncates tool calls, triggers retry loop, 60s drain timeout, exit code 1, systemd restart, repeat. Fix identified but NOT YET APPLIED: add `max_tokens: 32768` (or similar high value) to `/home/smrai/.hermes/config.yaml` under the `agent:` section. The gateway is likely still crash-looping.\n- User (Chief) last ",
+      "timestamp": "2026-05-07T09:00:19.335896+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "gateway"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "gateway"
+      ]
+    },
+    {
+      "id": "c8be6cf7",
+      "text": "- **Code path:** `gateway/run.py` -> `AIAgent(max_tokens=None)` -> `run_agent.py:994` -> `agent_loop.py:220` passes `None` to API",
+      "timestamp": "2026-05-07T09:00:19.336292+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "gateway"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "gateway"
+      ]
+    },
+    {
+      "id": "fa4ab1f8",
+      "text": "- **Fix:** Set `max_tokens: 32768` in config.yaml (or edit gateway/run.py to pass a default)",
+      "timestamp": "2026-05-07T09:00:19.336858+00:00",
+      "source": "session-state",
+      "metadata": {
+        "tags": [
+          "system",
+          "gateway"
+        ],
+        "source": "session-state"
+      },
+      "tags": [
+        "system",
+        "gateway"
+      ]
+    },
+    {
+      "id": "d4733706",
+      "text": "Always use Claude Code bridge (claude_code_ask MCP tool) for every code/technical/analysis task. The bridge daemon runs via launchctl on Mac in the Aqua session, which has Keychain access. SSH-only sessions cannot authenticate Claude Code.",
+      "timestamp": "2026-05-09T00:17:16.460248+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "claude-code",
+          "bridge",
+          "mcp",
+          "mac",
+          "standing-order"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "claude-code",
+        "bridge",
+        "mcp",
+        "mac",
+        "standing-order"
+      ]
+    },
+    {
+      "id": "5c463d87",
+      "text": "Use Google Antigravity (ag CLI) where headless commands work. ag --install-extension and ag --list-extensions work without display. ag chat and ag agent need GUI display. Fall back to Claude Code bridge or delegate_task when Antigravity needs GUI.",
+      "timestamp": "2026-05-09T00:17:23.077243+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "antigravity",
+          "google",
+          "standing-order",
+          "cli"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "antigravity",
+        "google",
+        "standing-order",
+        "cli"
+      ]
+    },
+    {
+      "id": "8d480f41",
+      "text": "All permanent knowledge stored in Obsidian vault at ~/Obsidian/Hermes/. Structure: SOPs/, Projects/, Memory/, System/, Logs/, Inbox/, Skills/. Every task result goes here.",
+      "timestamp": "2026-05-09T00:17:23.095448+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "obsidian",
+          "note-taking",
+          "storage",
+          "standing-order"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "obsidian",
+        "note-taking",
+        "storage",
+        "standing-order"
+      ]
+    },
+    {
+      "id": "135fe6f7",
+      "text": "Holographic memory at ~/hermes-immortal/memory/holo.py for durable recall. CLI: python3 holo.py stats|recall --tags|remember TEXT --tags. 3-layer: vector (tag+time), graph (entity relations), unified recall.",
+      "timestamp": "2026-05-09T00:17:23.113448+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "holographic-memory",
+          "recall",
+          "standing-order"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "holographic-memory",
+        "recall",
+        "standing-order"
+      ]
+    },
+    {
+      "id": "fe2094fc",
+      "text": "Claude Code MCP Bridge architecture: launchctl daemon on Mac (~/.openclaw/claude-code-bridge/claude-code-bridge.py) polls requests/ dir, runs claude -p via filesystem, writes responses/. MCP tools in hermes mcp_serve.py: claude_code_ask(prompt, workspace, model, max_turns, timeout_seconds). response time ~7-10s.",
+      "timestamp": "2026-05-09T00:17:23.130980+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "claude-code",
+          "bridge",
+          "architecture",
+          "mcp",
+          "mac"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "claude-code",
+        "bridge",
+        "architecture",
+        "mcp",
+        "mac"
+      ]
+    },
+    {
+      "id": "fd61cf9f",
+      "text": "Slack integration set up for Cognitia AI workspace. App ID: A0B2MTYB814. Bot token set in .env, app token set in .env. Gateway auto-detects Slack via SLACK_BOT_TOKEN env var. Uses Socket Mode (no webhook). Needs gateway restart to go live.",
+      "timestamp": "2026-05-09T01:19:52.144741+00:00",
+      "source": "agent",
+      "metadata": {
+        "tags": [
+          "slack",
+          "integration",
+          "gateway",
+          "platform"
+        ],
+        "source": "agent"
+      },
+      "tags": [
+        "slack",
+        "integration",
+        "gateway",
+        "platform"
+      ]
     }
   ],
-  "count": 34
+  "count": 51
 }
